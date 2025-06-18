@@ -28,11 +28,11 @@ USERNAME = environ.get('USERNAME', "") # ADMIN USERNAME
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', ''))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '0'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '0'))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '')) 
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ''))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0')) 
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '0'))
 
 # MongoDB 
 DATABASE_URI = environ.get('DATABASE_URI', "")
@@ -50,8 +50,8 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001864434358')) 
 
 # Added Link Here Not Id 
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '0')
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '0')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/')
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/')
 
 # Verification
 IS_VERIFY = is_enabled('IS_VERIFY', True)
