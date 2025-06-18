@@ -50,8 +50,8 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001864434358')) 
 
 # Added Link Here Not Id 
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '0')
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '0')
 
 # Verification
 IS_VERIFY = is_enabled('IS_VERIFY', True)
